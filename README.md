@@ -2,7 +2,7 @@
 find_local_hot_tables is a local database instance hotspot update table statistic sort tool.Used to quickly locate master-slave replication delays for local mysql instances. And high I/O load of database system.
 
 ## Installation
-`tar -xzvf find_local_hot_tables.linux32/64.tar`
+`tar -xzvf find_local_hot_tables.v0.1a.linux32/64.tar`
 
 `chmod 750 find_local_hot_tables`
 
