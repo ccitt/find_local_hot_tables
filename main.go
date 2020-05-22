@@ -1,6 +1,6 @@
 /**
  * Find localhost mysql hotspot update table
- * version: 0.1
+ * version: 0.1a
  * Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
  * Author: zhangli <ccitt@tom.com>
  *
@@ -86,6 +86,11 @@ func main() {
 	//时间逻辑检查,开始时间必须小于结束时间
 	if startTime >= stopTime {
 		log.Fatal("Please enter a parameter that start-datetime must be less than end-datetime.")
+	}
+
+	//为了避免解析文件过多等待时间过长,分析时间范围限制在24小时之内
+	if FormatedStopTime.Sub(FormatedStartTime).Hours() > 24 {
+		log.Fatal("Please enter start-datetime to end-datetime time range must be less than 24 hours.")
 	}
 
 	//链接数据库实例
