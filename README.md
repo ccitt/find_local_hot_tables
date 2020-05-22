@@ -3,13 +3,16 @@ find_local_hot_tables is a local database instance hotspot update table statisti
 
 ## Installation
 `tar -xzvf find_local_hot_tables.linux32/64.tar`
+
 `chmod 750 find_local_hot_tables`
 
 ## Use Examples
 **//Analyze the local 3306 instance hotspot update table from 2020-05-22 09:50:00 to 2020-05-22 09:55:00**
+
 `./find_local_hot_tables -h 127.0.0.1 -P 3306 -u username -p password -start-datetime "2020-05-22 09:50:00" -stop-datetime "2020-05-22 09:55:00"`
 
 **//Analyze the local 3307 instance hotspot update table last 10 Minutes**
+
 `./find_local_hot_tables -h 127.0.0.1 -P 3307 -u username -p password`
 
 ## Note
